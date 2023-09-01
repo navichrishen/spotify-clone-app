@@ -23,7 +23,7 @@ class _SpotifyAppState extends State<SpotifyApp> {
       // setting up the theme of the app
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
+        scaffoldBackgroundColor: Color.fromARGB(255, 19, 19, 19),
         brightness: Brightness.dark,
       ),
       home: const NavBar(),
