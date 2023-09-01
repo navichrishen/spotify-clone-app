@@ -61,6 +61,13 @@ flutter:
     - assets/icons/bell.png
     - assets/icons/history.png
     - assets/icons/setting.png
+    - assets/album_images/weekendimage.png
+    - assets/album_images/likedsongs.png
+    - assets/album_images/sigmasad.jpeg
+    - assets/album_images/navisplaylist.jpeg
+    - assets/album_images/riseandgrind.jpeg
+    - assets/album_images/90s.jpeg
+    - assets/album_images/cigarettes.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

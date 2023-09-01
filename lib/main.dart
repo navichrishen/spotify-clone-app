@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clone/components/navigation_bar.dart';
 import 'package:flutter_clone/screens/home_screen.dart';
 import 'package:flutter_clone/screens/my_library_screen.dart';
-import 'package:flutter_clone/screens/navigation_bar.dart';
 import 'package:flutter_clone/screens/search_screen.dart';
 
 void main() {
