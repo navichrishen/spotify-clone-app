@@ -68,6 +68,24 @@ flutter:
     - assets/album_images/riseandgrind.jpeg
     - assets/album_images/90s.jpeg
     - assets/album_images/cigarettes.webp
+    - assets/album_images/kasunkalhara.jpeg
+    - assets/album_images/kasunholdingmic.jpeg
+    - assets/icons/heart.png
+    - assets/icons/play-button.png
+
+    # dailymix images
+    - assets/album_images/postmalonedailymix.jpeg
+    - assets/album_images/dailymix2.jpeg
+    - assets/album_images/dailymix3.jpeg
+    - assets/album_images/dailymix4.jpeg
+    - assets/album_images/dailymix5.jpeg
+    - assets/album_images/dailymix6.jpeg
+    - assets/album_images/dailymix1row2.jpeg
+    - assets/album_images/dailymix2row2.jpeg
+    - assets/album_images/dailymix3row2.jpeg
+    - assets/album_images/dailymix4row2.jpeg
+    - assets/album_images/dailymix5row2.jpeg
+    - assets/album_images/dailymix6row2.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

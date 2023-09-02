@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clone/components/circular_album_view.dart';
+import 'package:flutter_clone/components/huge_rectangular_album.dart';
 import 'package:flutter_clone/components/long_album_view.dart';
+import 'package:flutter_clone/components/square_album_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -77,6 +80,7 @@ class _HomePageState extends State<HomePage> {
                           LongAlbum(
                               image: 'assets/album_images/likedsongs.png',
                               title: 'Liked Songs'),
+
                           SizedBox(
                             width: 10,
                           ),
@@ -86,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                               title: 'SIGMA SAD\n SONGS 😔')
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -105,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                               title: 'Rise and Grind')
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -125,7 +129,214 @@ class _HomePageState extends State<HomePage> {
                         ],
                       )
                     ],
-                  )
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    child: CircularAlbum(
+                        image: 'assets/album_images/kasunkalhara.jpeg'),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(10),
+                    child: HugeAlbum(
+                      image: 'assets/album_images/kasunholdingmic.jpeg',
+                      albumName: 'Kasun kalhara',
+                      likeIcon: 'assets/icons/heart.png',
+                      playIcon: 'assets/icons/play-button.png',
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      'Made For NaviChrishen',
+                      style: TextStyle(
+                          fontFamily: 'Gotham',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(children: const [
+                        SquareAlbum(
+                            image:
+                                'assets/album_images/postmalonedailymix.jpeg',
+                            albumName:
+                                'Post Malone , One Direction Daily mix 1'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix2.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix3.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix4.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix5.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix6.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ]),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      'Jump back in',
+                      style: TextStyle(
+                          fontFamily: 'Gotham',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(children: const [
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix1row2.jpeg',
+                            albumName:
+                                'Post Malone , One Direction Daily mix 1'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix2row2.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix3row2.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix4row2.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix5row2.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image: 'assets/album_images/dailymix6row2.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ]),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      'Your top mixes',
+                      style: TextStyle(
+                          fontFamily: 'Gotham',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(children: const [
+                        SquareAlbum(
+                            image:
+                                'assets/album_images/postmalonedailymix.jpeg',
+                            albumName:
+                                'Post Malone , One Direction Daily mix 1'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image:
+                                'assets/album_images/postmalonedailymix.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image:
+                                'assets/album_images/postmalonedailymix.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image:
+                                'assets/album_images/postmalonedailymix.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image:
+                                'assets/album_images/postmalonedailymix.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        SquareAlbum(
+                            image:
+                                'assets/album_images/postmalonedailymix.jpeg',
+                            albumName: 'albumName'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ]),
+                    ),
+                  ),
                 ],
               ),
             ),
