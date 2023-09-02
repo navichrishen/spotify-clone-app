@@ -142,7 +142,8 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.all(10),
                     child: HugeAlbum(
                       image: 'assets/album_images/kasunholdingmic.jpeg',
-                      albumName: 'Kasun kalhara',
+                      albumName: 'Bohoma Issara (Live)',
+                      singerName: 'Single. Kasun Kalhara',
                       likeIcon: 'assets/icons/heart.png',
                       playIcon: 'assets/icons/play-button.png',
                     ),
@@ -300,36 +301,31 @@ class _HomePageState extends State<HomePage> {
                           width: 15,
                         ),
                         SquareAlbum(
-                            image:
-                                'assets/album_images/postmalonedailymix.jpeg',
+                            image: 'assets/album_images/dailymix2.jpeg',
                             albumName: 'albumName'),
                         SizedBox(
                           width: 15,
                         ),
                         SquareAlbum(
-                            image:
-                                'assets/album_images/postmalonedailymix.jpeg',
+                            image: 'assets/album_images/dailymix3.jpeg',
                             albumName: 'albumName'),
                         SizedBox(
                           width: 15,
                         ),
                         SquareAlbum(
-                            image:
-                                'assets/album_images/postmalonedailymix.jpeg',
+                            image: 'assets/album_images/dailymix4.jpeg',
                             albumName: 'albumName'),
                         SizedBox(
                           width: 15,
                         ),
                         SquareAlbum(
-                            image:
-                                'assets/album_images/postmalonedailymix.jpeg',
+                            image: 'assets/album_images/dailymix5.jpeg',
                             albumName: 'albumName'),
                         SizedBox(
                           width: 15,
                         ),
                         SquareAlbum(
-                            image:
-                                'assets/album_images/postmalonedailymix.jpeg',
+                            image: 'assets/album_images/dailymix6.jpeg',
                             albumName: 'albumName'),
                         SizedBox(
                           width: 10,

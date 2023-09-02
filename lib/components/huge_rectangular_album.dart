@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 
 class HugeAlbum extends StatelessWidget {
   final String albumName;
+  final String singerName;
   final String image;
   final String likeIcon;
   final String playIcon;
@@ -16,6 +17,7 @@ class HugeAlbum extends StatelessWidget {
       required this.albumName,
       required this.likeIcon,
       required this.playIcon,
+      required this.singerName,
       super.key});
 
   @override
@@ -26,62 +28,90 @@ class HugeAlbum extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white10, borderRadius: BorderRadius.circular(5)),
       // main row of the widget
-      child: Row(children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(5),
-          child: Image.asset(
-            image,
-            width: 150,
-            height: 150,
-            fit: BoxFit.cover,
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Image.asset(
+              image,
+              width: 150,
+              height: 150,
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        // Columns for the two text widgets
-        Column(
-          children: [
-            Text(
-              albumName,
-              style: const TextStyle(
-                  fontFamily: 'Gotham',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              albumName,
-              style: const TextStyle(
-                  fontFamily: 'Gotham',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-
-            // Row of the two icon buttons
-            Row(
-              children: [
+          Column(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              // Rows of the first text line
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    albumName,
+                    style: const TextStyle(
+                        fontFamily: 'Gotham',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12),
+                  ),
+                  const SizedBox(
+                    width: 60,
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 7,
+              ),
+              // Rows of the second text line
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    singerName,
+                    style: const TextStyle(
+                        fontFamily: 'Gotham',
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white54,
+                        fontSize: 12),
+                  ),
+                  const SizedBox(
+                    width: 60,
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 45,
+              ),
+              // Row of the like button and play button
+              Row(children: [
+                const SizedBox(
+                  width: 10,
+                ),
                 IconButton(
                   onPressed: () {},
                   icon: ImageIcon(
                     AssetImage(likeIcon),
                   ),
                 ),
-                Padding(
-                    padding: EdgeInsets.only(left: 90),
-                    child: IconButton(
-                        onPressed: () {},
-                        icon: ImageIcon(AssetImage(playIcon))))
-              ],
-            )
-          ],
-        ),
-      ]),
+                const SizedBox(
+                  width: 110,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: ImageIcon(
+                    AssetImage(playIcon),
+                  ),
+                ),
+              ]),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

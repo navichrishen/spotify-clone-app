@@ -13,8 +13,7 @@ class SearchTabState extends State<SearchTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(child: const Text("works")),
+      body: Center(child: const Text("Search Screen")),
     );
   }
 }

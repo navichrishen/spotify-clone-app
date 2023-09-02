@@ -72,6 +72,9 @@ flutter:
     - assets/album_images/kasunholdingmic.jpeg
     - assets/icons/heart.png
     - assets/icons/play-button.png
+    - assets/album_images/dreamland.jpeg
+    - assets/icons/play-button-arrowhead.png
+    - assets/icons/audio-speaker.png
 
     # dailymix images
     - assets/album_images/postmalonedailymix.jpeg
@@ -102,6 +105,9 @@ flutter:
     - family: Gotham
       fonts:
         - asset: assets/Gotham-Spotify-Font/GothamMedium.ttf
+    - family: Gotham-light
+      fonts:
+        - asset: assets/Gotham-Spotify-Font/GothamLight.ttf
 
   #
   # For details regarding fonts from package dependencies,

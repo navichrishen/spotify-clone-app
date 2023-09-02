@@ -34,7 +34,8 @@ class LongAlbum extends StatelessWidget {
                 fontFamily: 'Gotham',
                 fontWeight: FontWeight.bold,
                 fontSize: 12),
-          )
+          ),
+          Expanded(child: SizedBox())
         ]),
       ),
       onTap: () {},

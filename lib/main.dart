@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clone/components/music_player.dart';
 import 'package:flutter_clone/components/navigation_bar.dart';
 import 'package:flutter_clone/screens/home_screen.dart';
+import 'package:flutter_clone/screens/landscape/home_screen_landscape.dart';
 import 'package:flutter_clone/screens/my_library_screen.dart';
 import 'package:flutter_clone/screens/search_screen.dart';
 
@@ -20,13 +22,19 @@ class _SpotifyAppState extends State<SpotifyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Spotify Clone App',
-      // setting up the theme of the app
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 19, 19, 19),
+        scaffoldBackgroundColor: Colors.black38,
         brightness: Brightness.dark,
       ),
-      home: const NavBar(),
+      //home: const NavBar(),
+      home: Scaffold(
+        body: OrientationBuilder(
+            builder: (context, orientation) =>
+                orientation == Orientation.portrait
+                    ? const NavBar()
+                    : const HomeScreenLandScape()),
+      ),
     );
   }
 }
