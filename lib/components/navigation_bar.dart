@@ -12,8 +12,14 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
+  // intitializing the current screen variable
   int currentScreen = 0;
-  final List<Widget> screens = [const HomePage(), SearchTab(), MyLibrary()];
+  // lisst of available screens
+  final List<Widget> screens = [
+    const HomePage(),
+    const SearchTab(),
+    const MyLibrary()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +28,9 @@ class _NavBarState extends State<NavBar> {
         alignment: Alignment.bottomCenter,
         children: [
           Scaffold(
+            // returns the current screen
             body: screens[currentScreen],
+            // bottom navigation bar
             bottomNavigationBar: Container(
               child: BottomNavigationBar(
                 backgroundColor: Colors.transparent,
@@ -30,7 +38,8 @@ class _NavBarState extends State<NavBar> {
                 selectedFontSize: 12,
                 unselectedFontSize: 12,
                 selectedItemColor: Colors.white,
-                unselectedItemColor: Color.fromARGB(103, 255, 255, 255),
+                unselectedItemColor: const Color.fromARGB(103, 255, 255, 255),
+                // setting the screen to current screen index
                 currentIndex: currentScreen,
                 onTap: (int screen) {
                   setState(() {
@@ -48,26 +57,29 @@ class _NavBarState extends State<NavBar> {
               ),
             ),
           ),
+          // music player bar
           Positioned(
             bottom: 55,
             left: 6,
             right: 6,
+            // navigate to music player on tap
             child: GestureDetector(
               onTap: () => Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const MusicPlayer())),
               child: Expanded(
+                  // adding material widget component
                   child: Material(
                 color: Colors.transparent,
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 17, 75, 129),
+                    color: const Color.fromARGB(255, 17, 75, 129),
                     borderRadius: BorderRadius.circular(5),
                   ),
+                  // row of the components in
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    //mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const SizedBox(
                         width: 10,
@@ -115,13 +127,13 @@ class _NavBarState extends State<NavBar> {
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: ImageIcon(
+                        icon: const ImageIcon(
                           AssetImage('assets/icons/heart.png'),
                         ),
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: ImageIcon(
+                        icon: const ImageIcon(
                           AssetImage('assets/icons/play-button-arrowhead.png'),
                         ),
                       ),

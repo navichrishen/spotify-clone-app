@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clone/components/music_player.dart';
 import 'package:flutter_clone/components/navigation_bar.dart';
-import 'package:flutter_clone/screens/home_screen.dart';
 import 'package:flutter_clone/screens/landscape/home_screen_landscape.dart';
-import 'package:flutter_clone/screens/my_library_screen.dart';
-import 'package:flutter_clone/screens/search_screen.dart';
 
 void main() {
   runApp(const SpotifyApp());
@@ -22,13 +18,14 @@ class _SpotifyAppState extends State<SpotifyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Spotify Clone App',
+      // basic theme of the application
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
         scaffoldBackgroundColor: Colors.black38,
         brightness: Brightness.dark,
       ),
-      //home: const NavBar(),
       home: Scaffold(
+        // orientation builder to maintaion the screens when orientation changed
         body: OrientationBuilder(
             builder: (context, orientation) =>
                 orientation == Orientation.portrait

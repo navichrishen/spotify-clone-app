@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class SquareAlbum extends StatelessWidget {
   final String image;
@@ -10,6 +8,7 @@ class SquareAlbum extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      // main container to hold album and album name
       child: Container(
         width: 150,
         height: 190,
@@ -21,15 +20,17 @@ class SquareAlbum extends StatelessWidget {
               width: 150,
               height: 150,
             ),
-            SizedBox(
+            // space between the album and album name
+            const SizedBox(
               height: 10,
             ),
             Center(
               child: Text(
                 albumName,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 12,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             )

@@ -12,8 +12,8 @@ class MyLibrary extends StatefulWidget {
 class _MyLibraryState extends State<MyLibrary> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: const Text('Library works')),
+    return const Scaffold(
+      body: Center(child: Text('Library works')),
     );
   }
 }

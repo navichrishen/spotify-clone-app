@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class SearchTab extends StatefulWidget {
   const SearchTab({super.key});
@@ -12,8 +10,8 @@ class SearchTab extends StatefulWidget {
 class SearchTabState extends State<SearchTab> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: const Text("Search Screen")),
+    return const Scaffold(
+      body: Center(child: Text("Search Screen")),
     );
   }
 }

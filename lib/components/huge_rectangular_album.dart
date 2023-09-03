@@ -1,8 +1,4 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class HugeAlbum extends StatelessWidget {
   final String albumName;
@@ -26,9 +22,12 @@ class HugeAlbum extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: 150,
       decoration: BoxDecoration(
-          color: Colors.white10, borderRadius: BorderRadius.circular(5)),
+        color: Colors.white10,
+        borderRadius: BorderRadius.circular(5),
+      ),
       // main row of the widget
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(5),
@@ -39,77 +38,58 @@ class HugeAlbum extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Column(
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-              // Rows of the first text line
-              Row(
+          // expanded widget to accquire remaing space
+          Expanded(
+            child: Container(
+              color: Colors.white12,
+              // positioning the components inside the container
+              child: Stack(
                 children: [
-                  const SizedBox(
-                    width: 20,
+                  Positioned(
+                    top: 25,
+                    left: 20,
+                    child: Text(
+                      albumName,
+                      style: const TextStyle(
+                          fontFamily: 'Gotham',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12),
+                    ),
                   ),
-                  Text(
-                    albumName,
-                    style: const TextStyle(
-                        fontFamily: 'Gotham',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12),
+                  Positioned(
+                    top: 45,
+                    left: 20,
+                    child: Text(
+                      singerName,
+                      style: const TextStyle(fontSize: 12),
+                    ),
                   ),
-                  const SizedBox(
-                    width: 60,
+                  Positioned(
+                    bottom: 15,
+                    left: 15,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: ImageIcon(
+                        AssetImage(likeIcon),
+                        size: 25,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 15,
+                    right: 15,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: ImageIcon(
+                        AssetImage(playIcon),
+                        size: 55,
+                      ),
+                    ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 7,
-              ),
-              // Rows of the second text line
-              Row(
-                children: [
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    singerName,
-                    style: const TextStyle(
-                        fontFamily: 'Gotham',
-                        fontWeight: FontWeight.normal,
-                        color: Colors.white54,
-                        fontSize: 12),
-                  ),
-                  const SizedBox(
-                    width: 60,
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 45,
-              ),
-              // Row of the like button and play button
-              Row(children: [
-                const SizedBox(
-                  width: 10,
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: ImageIcon(
-                    AssetImage(likeIcon),
-                  ),
-                ),
-                const SizedBox(
-                  width: 110,
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: ImageIcon(
-                    AssetImage(playIcon),
-                  ),
-                ),
-              ]),
-            ],
-          )
+            ),
+          ),
         ],
       ),
     );
