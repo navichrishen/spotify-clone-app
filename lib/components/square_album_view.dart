@@ -11,7 +11,7 @@ class SquareAlbum extends StatelessWidget {
       // main container to hold album and album name
       child: Container(
         width: 150,
-        height: 190,
+        height: 200,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
